@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Roll20 Nethys NPC Importer",
+  "version": "0.1.0",
+  "description": "Import Pathfinder 1e monster stat blocks from Archives of Nethys into Roll20.",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage"],
+  "host_permissions": ["https://aonprd.com/*", "https://www.aonprd.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://app.roll20.net/editor/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://app.roll20.net/editor/*"],
+      "js": ["injected.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}

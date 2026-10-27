@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+.toggle {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: #2f2f2f;
+  color: #b3b3b3;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.toggle:hover {
+  background: #3f3f3f;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid #8ab4f8;
+  outline-offset: 2px;
+}
